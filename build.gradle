@@ -1,0 +1,16 @@
+plugins {
+    id 'war'  
+}
+
+repositories {
+    jcenter()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet', version: '2.25'
+    compile 'com.github.linguatools:disco:master-SNAPSHOT'
+    
+    // not included in war:
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0' 
+}
